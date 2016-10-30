@@ -20,6 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Custom styles for this template -->
     <link href="dist/cust_css/signin.css" rel="stylesheet">
+    <link href="dist/cust_css/animate.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,9 +35,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<form class="form-signin">
 			<h2 class="form-signin-heading">Please sign in</h2>
 			<label for="inputEmail" class="sr-only">Email address</label>
-			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" onfocus="focusFunction()" required>
+			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" onfocus="focusFunction()" onblur="blurFunction()" required>
 			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" autocomplete="new-password" placeholder="Password" required>
+			<input type="password" id="inputPassword" class="form-control" onfocus="focusFunction()" onblur="blurFunction()" autocomplete="new-password" placeholder="Password" required>
 			
 			<div class="checkbox">
 			<label>
@@ -51,12 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!--logo-->
     <section id="welcome">
     	<div class="container">
-            <img class="img-responsive center-block wow fadeInUp" data-wow-delay=".3s" src="img/welcome/logo.png" alt="logo">
+            <img class="animated tada" src="img/welcome/logo.png" alt="logo">
         </div>
     </section>
   	<!--/logo-->
-
-  	<script src="dist/cust_js/wow.js"></script>
+  	<script src="dist/js/jquery-3.1.1.min.js"></script>
   	<script src="dist/cust_js/welcome.js"></script>
   </body>
 </html>

@@ -1,7 +1,17 @@
 function focusFunction(){
-	var elements = document.getElementsByClassName("form-signin"),i,len;
+	$("body").css("background-color","#aaa");
+	$("body").css("transition","background-color 500ms");
+	$(".form-signin").css("background-color","#eee");
+	$(".form-signin").css("transition","background-color 500ms");
+	$(".form-signin").css("box-shadow","10px 10px 10px grey");
+	$(".form-signin").css("transition","box-shadow 500ms");
+}
 
-	for(i=0,len=elements.lenght;i<len;i++){
-		elements[i].style.background="black";
-	}
+function blurFunction(){
+	$("body").css("background","#eee");
+	$("body").css("transition","background-color 500ms");
+	$(".form-signin").css("background-color","#aaa");
+	$(".form-signin").css("transition","background-color 500ms");
+	$(".form-signin").css("box-shadow","");
+	$(".form-signin").css("transition","box-shadow 500ms");
 }
