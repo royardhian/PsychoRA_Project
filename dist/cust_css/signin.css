@@ -11,6 +11,7 @@ body {
   margin: 0 auto;
   background-color: #aaa;
   border-radius: 25px;
+  color: white;
 }
 
 .form-signin .form-signin-heading,
