@@ -13,14 +13,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="">
     <link rel="icon" href="RA.ico">
 
-    <title>PsychoRA Project</title>
+    <title><?=$title?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/admin/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="dist/cust_css/signin.css" rel="stylesheet">
-    <link href="dist/cust_css/animate.css" rel="stylesheet">
+    <link href="assets/admin/cust_css/signin.css" rel="stylesheet">
+    <link href="assets/admin/cust_css/animate.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,8 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body>
     <!--container-->
     <div class="container">
-		<form class="form-signin">
-			<h2 class="form-signin-heading">Please sign in</h2>
+		<form class="form-signin" method="POST" action="<?= base_url('auth/login') ?>">
+			<h2 class="form-signin-heading" color>Please sign in</h2>
 			<label for="inputEmail" class="sr-only">Email address</label>
 			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" onfocus="focusFunction()" onblur="blurFunction()" required>
 			<label for="inputPassword" class="sr-only">Password</label>
@@ -44,7 +44,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<input type="checkbox" value="remember-me"> Remember me
 			</label>
 			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+			<div class="form-group">
+				<!--label for="txt_identity" class="col-sm-4 control-label">Username</label-->
+				<div class="col-sm-12">
+					<?php if(isset($message))echo $message;?>
+				</div>
+			</div>
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit" value="submit">Sign in</button>
 		</form>
 	</div> 
 	<!--/container-->
@@ -56,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </section>
   	<!--/logo-->
-  	<script src="dist/js/jquery-3.1.1.min.js"></script>
-  	<script src="dist/cust_js/welcome.js"></script>
+  	<script src="assets/admin/js/jquery-3.1.1.min.js"></script>
+  	<script src="assets/admin/cust_js/welcome.js"></script>
   </body>
 </html>
