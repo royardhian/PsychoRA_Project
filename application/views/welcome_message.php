@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="">
     <link rel="icon" href="RA.ico">
 
-    <title><?=$title?></title>
+    <title>Pshycora Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/admin/css/bootstrap.css" rel="stylesheet">
@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body>
     <!--container-->
     <div class="container">
-		<form class="form-signin" method="POST" action="<?= base_url('auth/login') ?>">
+		<form class="form-signin" method="POST" action="<?= base_url('welcome/login') ?>">
 			<h2 class="form-signin-heading" color>Please sign in</h2>
 			<label for="inputEmail" class="sr-only">Email address</label>
 			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" onfocus="focusFunction()" onblur="blurFunction()" required>
@@ -60,7 +60,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!--logo-->
     <section id="welcome">
     	<div class="container">
-            <img class="animated tada" src="img/welcome/logo.png" alt="logo">
+            <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+            <img class="animated tada" src="assets/img/welcome/logo.png" alt="logo">
         </div>
     </section>
   	<!--/logo-->
